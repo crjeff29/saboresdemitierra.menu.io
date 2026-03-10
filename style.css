@@ -44,7 +44,7 @@ h1 {
 
 .menu {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 20px auto 120px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
@@ -91,7 +91,7 @@ h1 {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     background-color: #CF9A6B;
     color: white;
     position: fixed;
