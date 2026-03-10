@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Sabores de la Tierra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- logo: si existe logo.png en la carpeta images se mostrará; de lo contrario aparece el texto -->
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="Sabores de la Tierra" id="logo" onerror="this.style.display='none';document.getElementById('header-text').style.display='block'">
+            <span id="header-text">Sabores de la Tierra</span>
+        </div>
+        <p>Disfruta de nuestros deliciosos platillos</p>
+    </header>
+
+    <section class="menu">
+        <div class="categoria">
+            <h2>Burritas</h2>
+            <div class="plato">
+                <img src="images/entrada1.jpg" alt="Burrita de Huevo">
+                <div class="descripcion">
+                    <h3>Burrita de huevo</h3>
+                    <p>Huevo en torta, frijoles y queso.</p>
+                </div>
+                <div class="precio">L.45.00</div>
+            </div>
+            <div class="plato">
+                <img src="images/entrada2.jpg" alt="Burrita de Carne">
+                <div class="descripcion">
+                    <h3>Burrita de Carne</h3>
+                    <p>Carne desmechada, frijoles y queso.</p>
+                </div>
+                <div class="precio">L.50.00</div>
+            </div>
+             <div class="plato">
+                <img src="images/entrada2.jpg" alt="Burrita de Chorizo">
+                <div class="descripcion">
+                    <h3>Burrita de Chorizo</h3>
+                    <p>Chorizo, frijoles y queso.</p>
+                </div>
+                <div class="precio">L.50.00</div>
+            </div>
+        </div>
+
+        <div class="categoria">
+            <h2>Platos Principales</h2>
+            <div class="plato">
+                <img src="images/principal1.jpg" alt="Pollo con Verduras">
+                <div class="descripcion">
+                    <h3>Pollo con Verduras</h3>
+                    <p>Pollo a la parrilla acompañado de verduras estacionales.</p>
+                </div>
+                <div class="precio">$15.99</div>
+            </div>
+            <div class="plato">
+                <img src="images/principal2.jpg" alt="Pasta Alfredo">
+                <div class="descripcion">
+                    <h3>Pasta Alfredo</h3>
+                    <p>Pasta con salsa cremosa Alfredo y pollo.</p>
+                </div>
+                <div class="precio">$12.99</div>
+            </div>
+        </div>
+
+        <div class="categoria">
+            <h2>Postres</h2>
+            <div class="plato">
+                <img src="images/postre1.jpg" alt="Tiramisú">
+                <div class="descripcion">
+                    <h3>Tiramisú</h3>
+                    <p>Clásico postre italiano con café y mascarpone.</p>
+                </div>
+                <div class="precio">$7.99</div>
+            </div>
+            <div class="plato">
+                <img src="images/postre2.jpg" alt="Flan de Caramelo">
+                <div class="descripcion">
+                    <h3>Flan de Caramelo</h3>
+                    <p>Flan suave con salsa de caramelo.</p>
+                </div>
+                <div class="precio">$5.99</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Sabores de la Tierra. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
