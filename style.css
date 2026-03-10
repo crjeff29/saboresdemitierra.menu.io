@@ -1,7 +1,7 @@
 /* Estilos básicos para la landing del restaurante */
 
 :root {
-    --primary: #8B4513; /* marrón tierra */
+    --primary: #CF9A6B; /* marrón tierra */
     --secondary: #b8860b; /* dorado */
     --accent: #f5deb3; /* beige claro */
     --text: #333;
@@ -29,10 +29,10 @@ header {
 }
 
 #logo {
-    max-height: 60px;
+    max-height: 200px;
 }
 
-#header-text {
+#headerText {
     display: none;
     font-size: 2rem;
     font-weight: bold;
@@ -51,16 +51,16 @@ h1 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.categoria {
+.category {
     margin-bottom: 20px;
 }
 
-.categoria h2 {
+.category h2 {
     border-bottom: 2px solid #8B4513;
     padding-bottom: 5px;
 }
 
-.plato {
+.dish {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,23 +68,23 @@ h1 {
     border-bottom: 1px solid #eee;
 }
 
-.plato:last-child {
+.dish:last-child {
     border-bottom: none;
 }
 
-.plato img {
+.dish img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.descripcion {
+.description {
     flex: 1;
     margin-left: 20px;
 }
 
-.precio {
+.price {
     font-weight: bold;
     color: #8B4513;
 }
@@ -92,7 +92,7 @@ h1 {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #8B4513;
+    background-color: #CF9A6B;
     color: white;
     position: fixed;
     bottom: 0;

@@ -1,13 +1,13 @@
-// Script básico para la landing del restaurante
+// Basic script for the restaurant landing page
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Agregar funcionalidad a los platos del menú
-    const platos = document.querySelectorAll('.plato');
+    // Add functionality to menu dishes
+    const dishes = document.querySelectorAll('.dish');
 
-    platos.forEach(plato => {
-        plato.addEventListener('click', function() {
-            const nombre = this.querySelector('h3').textContent;
-            alert(`Has seleccionado: ${nombre}`);
+    dishes.forEach(dish => {
+        dish.addEventListener('click', function() {
+            const name = this.querySelector('h3').textContent;
+            alert(`Has seleccionado: ${name}`);
         });
     });
 });
