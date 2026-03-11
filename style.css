@@ -80,13 +80,11 @@ h1 {
 }
 
 .category.collapsed {
-    margin-bottom: 0;
-    border: none;
-    background-color: transparent;
-}
-
-.category:not(.collapsed) {
+    /* Keep fixed height for collapsed state - only show h2 */
+    max-height: 50px;
     margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
 }
 
 .category.collapsed .dish {
