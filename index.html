@@ -3,30 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Sabores de la Tierra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
+
+        <h1>Bienvenidos</h1>
         <!-- logo: if logo.jpeg exists in images folder it will be displayed; otherwise text appears -->
         <div class="logo-container">
             <img src="images/logo.jpeg" alt="Sabores de la Tierra" id="logo"
                 onerror="this.style.display='none';document.getElementById('headerText').style.display='block'">
             <span id="headerText">Sabores de la Tierra</span>
         </div>
+
         <p>Disfruta de nuestros deliciosos platillos</p>
     </header>
 
-    <section class="menu">        
+    <section class="menu">
+        <h1>Menú</h1>
         <div class="category">
             <h2>Burritas</h2>
             <div class="dish">
                 <img src="images/logo.jpeg" alt="Burrita de Huevo">
                 <div class="description">
                     <h3>Burrita de huevo</h3>
-                    <p>Huevo en torta,frijoles y queso.</p>
+                    <p>Huevo en torta, frijoles y queso.</p>
                 </div>
                 <div class="price">L.45.00</div>
             </div>
@@ -34,7 +38,7 @@
                 <img src="images/logo.jpeg" alt="Burrita de Carne">
                 <div class="description">
                     <h3>Burrita de Carne</h3>
-                    <p>Carne desmechada,frijoles y queso.</p>
+                    <p>Carne desmechada, frijoles y queso.</p>
                 </div>
                 <div class="price">L.50.00</div>
             </div>
@@ -42,7 +46,7 @@
                 <img src="images/logo.jpeg" alt="Burrita de Chorizo">
                 <div class="description">
                     <h3>Burrita de Chorizo</h3>
-                    <p>Chorizo,frijoles y queso.</p>
+                    <p>Chorizo, frijoles y queso.</p>
                 </div>
                 <div class="price">L.50.00</div>
             </div>
@@ -54,7 +58,7 @@
                 <img src="images/logo.jpeg" alt="Baleada Sencilla">
                 <div class="description">
                     <h3>Baleada Sencilla</h3>
-                    <p>Frijoles,queso y mantequilla.</p>
+                    <p>Frijoles, queso y mantequilla.</p>
                 </div>
                 <div class="price">L.45.00</div>
             </div>
@@ -62,17 +66,33 @@
                 <img src="images/logo.jpeg" alt="Baleada con Huevo">
                 <div class="description">
                     <h3>Baleada con Huevo</h3>
-                    <p>Frijoles,huevo picado,queso.</p>
+                    <p>Frijoles, huevo picado, queso y mantequilla.</p>
                 </div>
                 <div class="price">L.50.00</div>
             </div>
             <div class="dish">
                 <img src="images/logo.jpeg" alt="Baleada de Chorizo">
                 <div class="description">
-                    <h3>Burrita de Chorizo</h3>
-                    <p>Chorizo,frijoles y queso.</p>
+                    <h3>Baleada de Chorizo</h3>
+                    <p>Chorizo, frijoles, queso y mantequilla.</p>
                 </div>
                 <div class="price">L.50.00</div>
+            </div>
+            <div class="dish">
+                <img src="images/logo.jpeg" alt="Baleada de Carne Desmechada">
+                <div class="description">
+                    <h3>Baleada de Carne Desmechada</h3>
+                    <p>Carne desmechada, frijoles, queso y mantequilla.</p>
+                </div>
+                <div class="price">L.75.00</div>
+            </div>
+            <div class="dish">
+                <img src="images/logo.jpeg" alt="Baleada de Carne Asada">
+                <div class="description">
+                    <h3>Baleada de Carne Asada</h3>
+                    <p>Carne asada, frijoles, queso y mantequilla.</p>
+                </div>
+                <div class="price">L.95.00</div>
             </div>
         </div>
         <div class="category">
@@ -82,7 +102,7 @@
                 <img src="images/logo.jpeg" alt="Plato Tipico">
                 <div class="description">
                     <h3>Plato Tipico</h3>
-                    <p>Carne de res asada,frijoles fritos,arroz o huevo,platano frito,queso chismol y dos tortillas
+                    <p>Carne de res asada, frijoles fritos, arroz o huevo, platano frito, queso chismol y dos tortillas
                         de maíz.</p>
                 </div>
                 <div class="price">L.165.00</div>
@@ -92,7 +112,7 @@
                 <img src="images/logo.jpeg" alt="Chuleta Tipica">
                 <div class="description">
                     <h3>Chuleta Tipica</h3>
-                    <p>Chuleta de cerdo frita,frijoles fritos,arroz o huevo,platano frito,queso chismol y dos
+                    <p>Chuleta de cerdo frita, frijoles fritos, arroz o huevo, platano frito, queso chismol y dos
                         tortillas
                         de maíz.</p>
                 </div>
@@ -116,56 +136,84 @@
                 </div>
                 <div class="price">L.150.00</div>
             </div>
-            
+
             <div class="dish">
                 <img src="images/logo.jpeg" alt="Chuleta con tajadas">
                 <div class="description">
                     <h3>Chuleta con Tajadas</h3>
-                    <p>Chuleta de cerdo fritaacompañado de tajadas de guineo verde y ensalada de repollo y aderezos.</p>
+                    <p>Chuleta de cerdo frita acompañado de tajadas de guineo verde y ensalada de repollo y aderezos.
+                    </p>
                 </div>
                 <div class="price">L.150.00</div>
-
             </div>
-               <div class="dish">
+            <div class="dish">
                 <img src="images/logo.jpeg" alt="Hamburguesa de Res">
                 <div class="description">
                     <h3>Hamburguesa de Res</h3>
-                    <p>Hamburguesa de res con lechuga,tomate y cebolla y una porcion de papas fritas.</p>
+                    <p>Hamburguesa de res con lechuga, tomate y cebolla y una porcion de papas fritas.</p>
                 </div>
                 <div class="price">L.190.00</div>
             </div>
 
-            </div>
-               <div class="dish">
+            <div class="dish">
                 <img src="images/logo.jpeg" alt="Hamburguesa de Pollo">
                 <div class="description">
                     <h3>Hamburguesa de Pollo</h3>
-                    <p>Hamburguesa de pollo con lechuga,tomate y cebolla y una porcion de papas fritas.</p>
+                    <p>Hamburguesa de pollo con lechuga, tomate y cebolla y una porcion de papas fritas.</p>
                 </div>
                 <div class="price">L.190.00</div>
             </div>
-            
+
         </div>
 
-        <!-- <div class="category">
-            <h2>Postres</h2>
+        <div class="category">
+            <h2>Golosinas</h2>
             <div class="dish">
-                <img src="images/postre1.jpg" alt="Tiramisú">
+                <img src="images/logo.jpeg" alt="Tacos de Pollo">
                 <div class="description">
-                    <h3>Tiramisú</h3>
-                    <p>Clásico postre italiano con café y mascarpone.</p>
+                    <h3>Tacos de Pollo</h3>
+                    <p>3 tacos de pollo en tortilla de maíz fritos, con ensalada de repollo, queso y aderezos.</p>
                 </div>
-                <div class="price">$7.99</div>
+                <div class="price">L.50.00</div>
             </div>
             <div class="dish">
-                <img src="images/postre2.jpg" alt="Flan de Caramelo">
+                <img src="images/logo.jpeg" alt="Enchiladas">
                 <div class="description">
-                    <h3>Flan de Caramelo</h3>
-                    <p>Flan suave con salsa de caramelo.</p>
+                    <h3>Enchiladas</h3>
+                    <p>3 enchiladas con pasta de carne de cerdo, ensalada de repollo, queso y aderezos.</p>
                 </div>
-                <div class="price">$5.99</div>
+                <div class="price">L.60.00</div>
             </div>
-        </div> -->
+            <div class="dish">
+                <img src="images/logo.jpeg" alt="Chilaquiles">
+                <div class="description">
+                    <h3>Chilaquiles</h3>
+                    <p>Una porción de tortillas fritas con carne de res, ensalada de repollo y aderezos.</p>
+                </div>
+                <div class="price">L.75.00</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Sabores Dulces</h2>
+            <div class="dish">
+                <img src="images/logo.jpeg" alt="Panqueques">
+                <div class="description">
+                    <h3>Panqueques</h3>
+                    <p>3 panqueques con banano, miel y crema batida.</p>
+                </div>
+                <div class="price">L.90.00</div>
+            </div>
+            <div class="dish">
+                <img src="images/logo.jpeg" alt="Mini Tostadas Francesas">
+                <div class="description">
+                    <h3>Mini Tostadas Francesas</h3>
+                    <p>Pan molde relleno con mantequilla crema con banano, miel y crema batida.</p>
+                </div>
+                <div class="price">L.110.00</div>
+            </div>
+
+        </div>
     </section>
 
     <footer>

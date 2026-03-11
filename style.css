@@ -51,13 +51,83 @@ h1 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.menu h1 {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.menu h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
 .category {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.8s ease-in-out;
+}
+
+.category.collapsed {
+    margin-bottom: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.category:not(.collapsed) {
     margin-bottom: 20px;
 }
 
+.category.collapsed .dish {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.category:not(.collapsed) .dish {
+    max-height: 1000px; /* Ajusta según el contenido máximo */
+    opacity: 1;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
 .category h2 {
-    border-bottom: 2px solid #8B4513;
-    padding-bottom: 5px;
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.category h2:hover {
+    background-color: var(--secondary);
+}
+
+.category h2::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.category.collapsed h2::after {
+    transform: translateY(-50%) rotate(-90deg);
 }
 
 .dish {
@@ -87,6 +157,7 @@ h1 {
 .price {
     font-weight: bold;
     color: #8B4513;
+    margin-right: 20px;
 }
 
 footer {
@@ -97,4 +168,36 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+/* Sticky title styles - Only on mobile */
+#stickyTitle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(207, 154, 107, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.2);
+    opacity: 0;
+}
+
+#stickyTitle:hover {
+    background-color: rgba(184, 134, 11, 0.9);
+    transform: scale(1.05);
+}
+
+/* Show sticky title only on mobile devices */
+@media (max-width: 768px) {
+    #stickyTitle {
+        display: block;
+    }
 }
