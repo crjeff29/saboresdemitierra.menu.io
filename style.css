@@ -284,6 +284,12 @@ footer {
     max-height: 60vh;
     object-fit: contain;
     border-radius: 8px;
+    cursor: grab;
+    user-select: none;
+}
+
+.modal-image:active {
+    cursor: grabbing;
 }
 
 .nav-btn {
