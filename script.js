@@ -101,6 +101,106 @@ function showImageModal(images, dishName) {
         }
     }
 
+    // Touch/swipe functionality
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    let startTime = 0;
+
+    function handleTouchStart(e) {
+        if (images.length <= 1) return;
+        startX = e.touches[0].clientX;
+        currentX = startX;
+        isDragging = true;
+        startTime = Date.now();
+        modalImage.style.transition = 'none';
+    }
+
+    function handleTouchMove(e) {
+        if (!isDragging || images.length <= 1) return;
+        currentX = e.touches[0].clientX;
+        const diff = currentX - startX;
+        modalImage.style.transform = `translateX(${diff}px)`;
+    }
+
+    function handleTouchEnd(e) {
+        if (!isDragging || images.length <= 1) return;
+        isDragging = false;
+        modalImage.style.transition = 'transform 0.3s ease';
+
+        const diff = currentX - startX;
+        const timeDiff = Date.now() - startTime;
+        const velocity = Math.abs(diff) / timeDiff;
+
+        // If swipe is significant enough or fast enough
+        if (Math.abs(diff) > 50 || velocity > 0.5) {
+            if (diff > 0) {
+                // Swipe right - previous image
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            } else {
+                // Swipe left - next image
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            }
+        }
+
+        modalImage.style.transform = 'translateX(0)';
+        updateImage();
+    }
+
+    // Mouse drag functionality for desktop
+    function handleMouseDown(e) {
+        if (images.length <= 1) return;
+        startX = e.clientX;
+        currentX = startX;
+        isDragging = true;
+        startTime = Date.now();
+        modalImage.style.transition = 'none';
+        modalImage.style.cursor = 'grabbing';
+        e.preventDefault();
+    }
+
+    function handleMouseMove(e) {
+        if (!isDragging || images.length <= 1) return;
+        currentX = e.clientX;
+        const diff = currentX - startX;
+        modalImage.style.transform = `translateX(${diff}px)`;
+    }
+
+    function handleMouseUp(e) {
+        if (!isDragging || images.length <= 1) return;
+        isDragging = false;
+        modalImage.style.transition = 'transform 0.3s ease';
+        modalImage.style.cursor = 'grab';
+
+        const diff = currentX - startX;
+        const timeDiff = Date.now() - startTime;
+        const velocity = Math.abs(diff) / timeDiff;
+
+        // If drag is significant enough or fast enough
+        if (Math.abs(diff) > 50 || velocity > 0.5) {
+            if (diff > 0) {
+                // Drag right - previous image
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            } else {
+                // Drag left - next image
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            }
+        }
+
+        modalImage.style.transform = 'translateX(0)';
+        updateImage();
+    }
+
+    // Add touch event listeners
+    modalImage.addEventListener('touchstart', handleTouchStart, { passive: false });
+    modalImage.addEventListener('touchmove', handleTouchMove, { passive: false });
+    modalImage.addEventListener('touchend', handleTouchEnd, { passive: false });
+
+    // Add mouse event listeners for desktop
+    modalImage.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
     // Navigation functionality
     if (prevBtn && images.length > 1) {
         prevBtn.addEventListener('click', (e) => {
